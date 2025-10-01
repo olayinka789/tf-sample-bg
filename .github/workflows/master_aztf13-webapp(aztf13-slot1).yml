@@ -21,7 +21,7 @@ jobs:
     - name: Set up .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '6.0'
+        dotnet-version: '8.0'
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
@@ -34,6 +34,6 @@ jobs:
       with:
         app-name: aztf13-webapp
         slot-name: aztf13-slot1
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_198B666AB6984F7F87D0E4D7BC65BEDF }}
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6447B1ABDC7B44C898B01D65369B7F8D }}
         package: ${{env.DOTNET_ROOT}}/myapp
 
